@@ -3,7 +3,7 @@
   "displayName": "CSS Property Sorter",
   "description": "vscode extension that allows to sort css properties in a logical and consistent order",
   "version": "1.0.0",
-  "publisher": "EnzoMourany",
+  "publisher": "Enzo Mourany",
   "license": "MIT",
   "icon": "images/icon.png",
   "engines": {
