@@ -1,5 +1,5 @@
 <p align="center">
- <img width="100px" height="100px" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/img/icon.png" align="center" alt="GitHub Readme Stats" />
+ <img width="100px" height="100px" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/icon.png" align="center" alt="Icon" />
  <h2 align="center">CSS Property Sorter</h2>
 </p>
 
@@ -26,13 +26,13 @@ There is an ordering standard for css properties that is not well respected. Thi
 
 ### 3. Click on `run` in the notification that appears
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Notification Run Button" />
 
 ### 4. The properties are now sorted !
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Selector Before Sort" />
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-after-sort.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-after-sort.png" align="center" alt="Selector After Sort" />
 
 
 ## Release Notes
