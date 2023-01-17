@@ -5,7 +5,7 @@ import { ORDERED_PROPERTIES } from './orderedProperties';
  * Sorts the CSS properties within the active text editor.
  * @returns void
  */
-export const sortProperties = (): string[] => {
+export const sortProperties = () => {
   // Get the active text editor
   let editor = vscode.window.activeTextEditor as vscode.TextEditor;
   let document = editor.document as vscode.TextDocument;
@@ -16,7 +16,7 @@ export const sortProperties = (): string[] => {
   
   // Initialize an empty array to store the sorted lines
   let sortedLines: string[] = [];
-  
+
   let i: number = 0;
   for (let line of lines) {
     // Check if the line is a CSS selector
@@ -59,11 +59,9 @@ export const sortProperties = (): string[] => {
     }
   }
   
-  // Replace the text within the active text editor with the sorted lines				
+  // Replace the text within the active text editor with the sorted lines		
   let newText: string = sortedLines.join('\n');
   editor.edit(editBuilder => {
     editBuilder.replace(new vscode.Range(0, 0, document.lineCount, 0), newText);
   });
-
-  return sortedLines;
 };

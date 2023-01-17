@@ -20,6 +20,10 @@ export function activate(context: vscode.ExtensionContext) {
 	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sort', () => {
 		vscode.window.showInformationMessage('Do you want to sort your CSS properties?', 'Cancel', 'Run').then(val => {
 			if (val === 'Run') {
+				while (vscode.window.activeTextEditor?.document.languageId !== 'css' && vscode.window.activeTextEditor?.document.languageId !== 'scss') {
+					vscode.window.showErrorMessage('Please open a CSS or SCSS file to sort');
+					return;
+				}
 				sortProperties();
 			}
 		});
