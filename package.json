@@ -9,7 +9,9 @@
   "categories": [
     "Other",
     "Formatters",
-    "Linters"
+    "Linters",
+    "Snippets",
+    "Keymaps"
   ],
   "repository": {
     "type": "git",
@@ -21,14 +23,14 @@
     "onLanguage:scss",
     "onLanguage:sass",
     "onLanguage:postcss",
-    "onCommand:css-property-sorter.sort"
+    "onCommand:css-property-sorter.sortProperties"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "css-property-sorter.helloWorld",
-        "title": "Hello World"
+        "command": "css-property-sorter.sortProperties",
+        "title": "Sort CSS Properties"
       }
     ]
   },
