@@ -65,6 +65,11 @@ export function activate(context: vscode.ExtensionContext) {
 						let selector: string = line.trim();
 						let properties: string[] = [];
 						let nextLine: string = lines[i + 1];
+						
+						// Get the start and end positions of the CSS selector
+						let start: vscode.Position = document.positionAt(document.getText().indexOf(selector));
+						let end: vscode.Position = document.positionAt(document.getText().indexOf('}') + 1);
+						
 						while (!nextLine.trim().endsWith('}')) {
 							// Check if the next line is a CSS property
 							if (nextLine.trim().includes(':')) {
@@ -83,6 +88,11 @@ export function activate(context: vscode.ExtensionContext) {
 						sortedLines.push(selector);
 						for (let prop of properties) {
 							sortedLines.push(prop);
+							
+							// Replace the text within the active text editor with the sorted lines
+							editor.edit(editBuilder => {
+								editBuilder.replace(new vscode.Range(start.line, start.character, end.line, end.character), selector + '\n' + properties.join('\n') + '\n}');
+							});
 						}
 						sortedLines.push('}');
 					} else {
