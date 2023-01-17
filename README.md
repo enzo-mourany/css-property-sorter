@@ -3,7 +3,6 @@
  <h2 align="center">CSS Property Sorter</h2>
 </p>
 
-#
 
 ## Description
 
@@ -23,17 +22,17 @@ There is an ordering standard for css properties that is not well respected. Thi
 
 ### 2. Click on the `CSS Sort` button in the status bar
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/img/statusbar-button.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/statusbar-button.png" align="center" alt="Status Bar Button" />
 
 ### 3. Click on `run` in the notification that appears
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/img/notification.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Status Bar Button" />
 
 ### 4. The properties are now sorted !
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/img/selector-before-sort.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Status Bar Button" />
 
-<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/img/selector-after-sort.png" align="center" alt="Status Bar Button" />
+<img src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-after-sort.png" align="center" alt="Status Bar Button" />
 
 
 ## Release Notes
