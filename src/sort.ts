@@ -18,7 +18,9 @@ export const sortProperties = () => {
   let sortedLines: string[] = [];
 
   let i: number = 0;
-  for (let line of lines) {
+  //for (let line of lines) {
+  while (i < lines.length) {
+    let line: string = lines[i];
     // Check if the line is a CSS selector
     if (line.trim().endsWith('{')) {
       let selector: string = line.trim();
@@ -49,13 +51,19 @@ export const sortProperties = () => {
         sortedLines.push(prop);
         
         // Replace the text within the active text editor with the sorted lines
+        /*
         editor.edit(editBuilder => {
           editBuilder.replace(new vscode.Range(start.line, start.character, end.line, end.character), selector + '\n' + properties.join('\n') + '\n}');
         });
+        */
       }
-      sortedLines.push('}');
+      if(lines[i + 1] && lines[i + 1].trim() !== '}'){
+        sortedLines.push('}');
+      }
+      i++;
     } else {
       sortedLines.push(line);
+      i++;
     }
   }
   
