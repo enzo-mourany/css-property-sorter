@@ -7,10 +7,21 @@
     "vscode": "^1.74.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Formatters",
+    "Linters"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enzo-mourany/css-property-order"
+  },
   "activationEvents": [
-    "onCommand:css-property-sorter.helloWorld"
+    "onLanguage:css",
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:sass",
+    "onLanguage:postcss",
+    "onCommand:css-property-sorter.sort"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -21,6 +32,19 @@
       }
     ]
   },
+  "keywords": [
+    "CSS",
+    "organizer",
+    "vscode-extension",
+    "web",
+    "property",
+    "sorter",
+    "sort",
+    "order",
+    "css-property-sorter",
+    "css-property-order",
+    "css-property-sort"
+  ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
