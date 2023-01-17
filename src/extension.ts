@@ -11,10 +11,10 @@ export function activate(context: vscode.ExtensionContext) {
 	cssSortButton.tooltip = 'Sort CSS properties';
 	cssSortButton.show();
 	
-	let sortCommand = vscode.commands.registerCommand('css-property-sorter.sort', () => {
+	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sort', () => {
 		vscode.window.showInformationMessage('Do you want to sort your CSS properties?', 'Cancel', 'Run').then(val => {
 			if (val === 'Run') {
-				const ORDERED_PROPERTIES = [
+				const ORDERED_PROPERTIES: string[] = [
 					'display',
 					'justify-content',
 					'align-items',
@@ -62,9 +62,9 @@ export function activate(context: vscode.ExtensionContext) {
 				for (let line of lines) {
 					// Check if the line is a CSS selector
 					if (line.trim().endsWith('{')) {
-						let selector = line.trim();
-						let properties = [];
-						let nextLine = lines[i + 1];
+						let selector: string = line.trim();
+						let properties: string[] = [];
+						let nextLine: string = lines[i + 1];
 						while (!nextLine.trim().endsWith('}')) {
 							// Check if the next line is a CSS property
 							if (nextLine.trim().includes(':')) {
@@ -75,8 +75,8 @@ export function activate(context: vscode.ExtensionContext) {
 						}
 						// Sort the properties according to the ORDERED_PROPERTIES constant
 						properties.sort((a, b) => {
-							let aProp = a.split(':')[0].trim();
-							let bProp = b.split(':')[0].trim();
+							let aProp: string = a.split(':')[0].trim();
+							let bProp: string = b.split(':')[0].trim();
 							return ORDERED_PROPERTIES.indexOf(aProp) - ORDERED_PROPERTIES.indexOf(bProp);
 						});
 						// Add the selector and sorted properties to the sortedLines array
