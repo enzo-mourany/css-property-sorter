@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/enzo-mourany/css-property-order"
+    "url": "https://github.com/enzo-mourany/css-property-sorter"
   },
   "activationEvents": [
     "onLanguage:css",
