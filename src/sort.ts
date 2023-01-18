@@ -20,12 +20,16 @@ export const sortProperties = () => {
   let i: number = 0;
   while (i < lines.length) {
     let line: string = lines[i];
+    let indentation: string = '';
     
     // Check if the line is a CSS selector
     if (line.trim().endsWith('{')) {
       let selector: string = line.trim();
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
+
+      // Save the identation for the selector line
+      indentation = line.match(/^\s*/)?.[i + 1] || '  ' as string;
       
       while (!nextLine.trim().endsWith('}')) {
         // Check if the next line is a CSS property
@@ -46,10 +50,10 @@ export const sortProperties = () => {
       // Add the selector and sorted properties to the sortedLines array
       sortedLines.push(selector);
       for (let prop of properties) {
-        sortedLines.push(prop);
+        sortedLines.push(indentation + prop);
       }
       if(lines[i + 1] && lines[i + 1].trim() !== '}'){
-        sortedLines.push('}');
+        sortedLines.push(indentation + '}');
       }
       i++;
     } else {
