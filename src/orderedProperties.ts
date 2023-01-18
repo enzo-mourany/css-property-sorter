@@ -52,7 +52,7 @@ export const ORDERED_PROPERTIES: string[] = [
   'visibility',
   'opacity',
   'transform',
-  // Clipping properties
+  // Cliping properties
   'overflow',
   'overflow-x',
   'overflow-y',
