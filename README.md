@@ -6,7 +6,7 @@
 
 ## Description
 
-This extension sorts CSS properties in order to make them easier to read and maintain.
+This extension allows you to sort the CSS properties of each selector in a CSS file. It makes the code more readable and facilitates maintenance.
 
 There is an ordering standard for css properties that is not well respected. This extension allows you to automatically order all these properties.
 
@@ -30,9 +30,25 @@ There is an ordering standard for css properties that is not well respected. Thi
 
 ### 4. The properties are now sorted !
 
-<img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Selector Before Sort" />
+<img width="30%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Selector Before Sort" />
 
-<img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-after-sort.png" align="center" alt="Selector After Sort" />
+<img width="30%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-after-sort.png" align="center" alt="Selector After Sort" />
+
+
+## Configuration
+
+The extension uses the following sorting standard :
+
+- flexbox properties
+- grid properties
+- positionning properties
+- visibility properties
+- cliping properties
+- box properties
+- animation properties
+- background properties
+- border properties
+- typography properties
 
 
 ## Release Notes
