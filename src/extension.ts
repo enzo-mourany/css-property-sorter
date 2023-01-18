@@ -9,15 +9,13 @@ let cssSortButton: vscode.StatusBarItem;
  * @param context The extension context provided by VS Code.
  */
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "css-property-sorter" is now active!');
-	
 	cssSortButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
-	cssSortButton.command = 'css-property-sorter.sort';
+	cssSortButton.command = 'css-property-sorter.sortProperties';
 	cssSortButton.text = 'CSS Sort';
 	cssSortButton.tooltip = 'Sort CSS properties';
 	cssSortButton.show();
 	
-	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sort', () => {
+	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sortProperties', () => {
 		vscode.window.showInformationMessage('Do you want to sort your CSS properties?', 'Cancel', 'Run').then(val => {
 			if (val === 'Run') {
 				while (vscode.window.activeTextEditor?.document.languageId !== 'css' && vscode.window.activeTextEditor?.document.languageId !== 'scss') {
