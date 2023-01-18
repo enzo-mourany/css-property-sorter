@@ -12,3 +12,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Contributing manual
 - Add Properties order -> Documentation
+
+## [1.0.2]
+
+- Change github repository url
+
