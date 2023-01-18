@@ -17,3 +17,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Change github repository url
 
+## [1.0.3]
+
+- Save indent after sort
+- Add command to start sort
+
+

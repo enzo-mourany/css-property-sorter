@@ -18,17 +18,21 @@ There is an ordering standard for css properties that is not well respected. Thi
 
 ## Usage
 
-### 1. Open a CSS (or SASS, SCSS, LESS) file
+1. Open a CSS (or SASS, SCSS, LESS) file
 
-### 2. Click on the `CSS Sort` button in the status bar
+2. Click on the `CSS Sort` button in the status bar
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/statusbar-button.png" align="center" alt="Status Bar Button" />
 
-### 3. Click on `run` in the notification that appears
+or tap `Ctrl+Shift+P` and type `CSS Sort`
+
+<img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/command.png" align="center" alt="Command Palette" />
+
+1. Click on `run` in the notification that appears
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Notification Run Button" />
 
-### 4. The properties are now sorted !
+4. The properties are now sorted !
 
 <img width="30%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/selector-before-sort.png" align="center" alt="Selector Before Sort" />
 
