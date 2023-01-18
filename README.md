@@ -28,7 +28,7 @@ or tap `Ctrl+Shift+P` and type `CSS Sort`
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/command.png" align="center" alt="Command Palette" />
 
-1. Click on `run` in the notification that appears
+3. Click on `run` in the notification that appears
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Notification Run Button" />
 
