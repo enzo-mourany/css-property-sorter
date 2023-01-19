@@ -22,4 +22,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Save indent after sort
 - Add command to start sort
 
+## [1.1.1]
+
+- Fix wrong version publish 1.1.0 (error)
 
