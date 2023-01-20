@@ -29,11 +29,11 @@ export const sortProperties = () => {
       let nextLine: string = lines[i + 1];
 
       // Use regular expression to extract current indentation for the selector
-      let indentationMatch = line.match(/^\s+/);
-      let indentation = indentationMatch ? indentationMatch[0] : '';
+      let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
+      let indentation: string = indentationMatch ? indentationMatch[0] : '';
       
       // get the indentation in vscode settings (CSS file only)
-      let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
+      let workspaceIndentation: number = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
       for (let j: number = 0; j < workspaceIndentation; j++) {
         indentation += ' ';
       }
@@ -41,7 +41,7 @@ export const sortProperties = () => {
       while (!nextLine.trim().endsWith('}') && !nextLine.trim().endsWith('{')) {
         // Check if the next line is a CSS property
         if (nextLine.trim().includes(':')) {
-          let indentationMatch = nextLine.match(/^\s+/);
+          let indentationMatch = nextLine.match(/^\s+/) as RegExpMatchArray;
           indentation = indentationMatch ? indentationMatch[0] : '';
           properties.push(nextLine.trim());
         }
@@ -60,7 +60,13 @@ export const sortProperties = () => {
       if (document.languageId === 'css') {
         sortedLines.push(selector);
       } else if (document.languageId === 'scss') {
-        sortedLines.push(indentation + selector);
+        // scss indentation
+        let selectorIndent: string = '';
+        for (let j: number = 0; j < indentation.split('').length - workspaceIndentation; j++) {
+          selectorIndent += ' ';
+        }
+        // remove selectorIdent from indentation
+        sortedLines.push(selectorIndent + selector);
       }
 
       // Add the properties to the sortedLines array
