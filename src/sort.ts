@@ -28,8 +28,11 @@ export const sortProperties = () => {
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
 
-      // Save the identation for the selector line
-      indentation = line.match(/^\s*/)?.[i + 1] || '  ' as string;
+      // get the indentation in vscode settings (CSS file only)
+      let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
+      for (let j: number = 0; j < workspaceIndentation; j++) {
+        indentation += ' ';
+      }
       
       while (!nextLine.trim().endsWith('}')) {
         // Check if the next line is a CSS property
