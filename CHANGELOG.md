@@ -26,3 +26,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Fix wrong version publish 1.1.0 (error)
 
+## [1.2.0]
+
+- Scss file support
+- Fix css indentation selector
