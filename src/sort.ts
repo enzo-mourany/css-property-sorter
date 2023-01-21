@@ -20,7 +20,6 @@ export const sortProperties = () => {
   let i: number = 0;
   while (i < lines.length) {
     let line: string = lines[i];
-    //let indentation: string = '';
     
     // Check if the line is a CSS selector
     if (line.trim().endsWith('{')) {
