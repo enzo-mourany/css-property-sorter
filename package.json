@@ -22,10 +22,8 @@
   },
   "activationEvents": [
     "onLanguage:css",
-    "onLanguage:less",
     "onLanguage:scss",
     "onLanguage:sass",
-    "onLanguage:postcss",
     "onCommand:css-property-sorter.sortProperties"
   ],
   "main": "./out/extension.js",
@@ -39,6 +37,7 @@
   },
   "keywords": [
     "CSS",
+    "SCSS",
     "organizer",
     "vscode-extension",
     "web",
