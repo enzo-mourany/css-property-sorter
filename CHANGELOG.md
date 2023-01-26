@@ -30,3 +30,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Scss file support
 - Fix css indentation selector
+
+## [1.2.1]
+
+- Fix at-rules selector : `@keyframes`, `@import` are not sorted
