@@ -2,7 +2,7 @@
   "name": "css-property-sorter",
   "displayName": "CSS Property Sorter",
   "description": "vscode extension that allows to sort css properties in a logical and consistent order",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "EnzoMourany",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -23,7 +23,6 @@
   "activationEvents": [
     "onLanguage:css",
     "onLanguage:scss",
-    "onLanguage:sass",
     "onCommand:css-property-sorter.sortProperties"
   ],
   "main": "./out/extension.js",
