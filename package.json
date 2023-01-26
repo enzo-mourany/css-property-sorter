@@ -41,12 +41,9 @@
     "vscode-extension",
     "web",
     "property",
-    "sorter",
     "sort",
     "order",
-    "css-property-sorter",
-    "css-property-order",
-    "css-property-sort"
+    "css-property-sorter"
   ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
