@@ -38,12 +38,10 @@
     "CSS",
     "SCSS",
     "organizer",
-    "vscode-extension",
     "web",
     "property",
     "sort",
-    "order",
-    "css-property-sorter"
+    "order"
   ],
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
