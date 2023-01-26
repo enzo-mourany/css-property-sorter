@@ -55,13 +55,6 @@ The extension uses the following sorting standard :
 - typography properties
 
 
-## Release Notes
-
-### 1.0.0
-
-Initial release of CSS Property Sorter
-
-
 ## License
 
 [MIT License](https://choosealicense.com/licenses/mit/)
