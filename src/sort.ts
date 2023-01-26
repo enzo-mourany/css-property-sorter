@@ -79,6 +79,7 @@ export const sortProperties = () => {
       }
       i++;
     } else if (line.trim().startsWith('@') && !line.trim().startsWith('@import')) {
+      // Check if the line is a CSS at-rule
       let closeBracket: number = 0;
       while (closeBracket < 2) {
         if (line.trim().endsWith('{')) {
