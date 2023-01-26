@@ -22,11 +22,11 @@ export const sortProperties = () => {
     let line: string = lines[i];
     
     // Check if the line is a CSS selector
-    if (line.trim().endsWith('{') && !line.trim().startsWith('@')) {
+    if (line.trim().endsWith('{')) {
       let selector: string = line.trim();
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
-
+      
       // Use regular expression to extract current indentation for the selector
       let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
       let indentation: string = indentationMatch ? indentationMatch[0] : '';
@@ -67,7 +67,7 @@ export const sortProperties = () => {
         // remove selectorIdent from indentation
         sortedLines.push(selectorIndent + selector);
       }
-
+      
       // Add the properties to the sortedLines array
       for (let prop of properties) {
         sortedLines.push(indentation + prop);
