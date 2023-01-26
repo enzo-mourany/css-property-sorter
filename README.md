@@ -6,19 +6,19 @@
 
 ## Description
 
-This extension allows you to sort the CSS properties of each selector in a CSS file. It makes the code more readable and facilitates maintenance.
+This extension allows you to sort the **CSS properties** of each selector in a **CSS** or **SCSS** file. It makes the code more readable and facilitates maintenance.
 
 There is an ordering standard for css properties that is not well respected. This extension allows you to automatically order all these properties.
 
 ## Installation
 
-1. Open the extensions panel in VS Code
+1. Open the extensions panel in VSCode
 2. Search for `CSS Property Sorter`
 3. Click `Install`
 
 ## Usage
 
-1. Open a CSS (or SASS, SCSS, LESS) file
+1. Open a **CSS** or **SCSS** file
 
 2. Click on the `CSS Sort` button in the status bar
 
