@@ -22,7 +22,7 @@ export const sortProperties = () => {
     let line: string = lines[i];
     
     // Check if the line is a CSS selector
-    if (line.trim().endsWith('{')) {
+    if (line.trim().endsWith('{') && !line.trim().startsWith('@')) {
       let selector: string = line.trim();
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
@@ -78,7 +78,7 @@ export const sortProperties = () => {
         }
       }
       i++;
-    } else if (line.trim().startsWith('@')) {
+    } else if (line.trim().startsWith('@') && !line.trim().startsWith('@import')) {
       let closeBracket: number = 0;
       while (closeBracket < 2) {
         if (line.trim().endsWith('{')) {
@@ -90,6 +90,9 @@ export const sortProperties = () => {
         i++;
         line = lines[i];
       }
+    } else if (line.trim().startsWith('@import')) {
+      sortedLines.push(line);
+      i++;
     } else {
       sortedLines.push(line);
       i++;
