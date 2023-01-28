@@ -10,9 +10,9 @@ let cssSortButton: vscode.StatusBarItem;
  */
 export function activate(context: vscode.ExtensionContext) {
 	cssSortButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
-	cssSortButton.command = 'css-property-sorter.sortProperties';
-	cssSortButton.text = 'CSS Sort';
-	cssSortButton.tooltip = 'Sort CSS properties';
+	cssSortButton.command = 'css-property-sorter.sortProperties' as string | vscode.Command;
+	cssSortButton.text = 'CSS Sort' as string;
+	cssSortButton.tooltip = 'Sort CSS properties' as string | vscode.MarkdownString;
 	cssSortButton.show();
 	
 	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sortProperties', () => {
