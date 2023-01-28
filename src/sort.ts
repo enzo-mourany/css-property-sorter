@@ -5,7 +5,7 @@ import { ORDERED_PROPERTIES } from './orderedProperties';
 * Sorts the CSS properties within the active text editor.
 * @returns void
 */
-export const sortProperties = () => {
+export const sortProperties = (): void => {
   // Get the active text editor
   let editor = vscode.window.activeTextEditor as vscode.TextEditor;
   let document = editor.document;
@@ -20,6 +20,16 @@ export const sortProperties = () => {
   let i: number = 0;
   while (i < lines.length) {
     let line: string = lines[i];
+
+    // Use regular expression to extract current indentation for the selector
+    let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
+    let indentation: string = indentationMatch ? indentationMatch[0] : '';
+
+    // get the indentation in vscode settings (CSS file only)
+    let workspaceIndentation: number = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
+    for (let j: number = 0; j < workspaceIndentation; j++) {
+      indentation += ' ';
+    }
     
     // Check if the line is a CSS selector
     if (line.trim().endsWith('{') && !line.trim().startsWith('@')) {
@@ -27,21 +37,11 @@ export const sortProperties = () => {
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
       
-      // Use regular expression to extract current indentation for the selector
-      let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
-      let indentation: string = indentationMatch ? indentationMatch[0] : '';
-      
-      // get the indentation in vscode settings (CSS file only)
-      let workspaceIndentation: number = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
-      for (let j: number = 0; j < workspaceIndentation; j++) {
-        indentation += ' ';
-      }
-      
       while (!nextLine.trim().endsWith('}') && !nextLine.trim().endsWith('{')) {
         // Check if the next line is a CSS property
         if (nextLine.trim().includes(':')) {
-          let indentationMatch = nextLine.match(/^\s+/) as RegExpMatchArray;
-          indentation = indentationMatch ? indentationMatch[0] : '';
+          indentationMatch = nextLine.match(/^\s+/) as RegExpMatchArray;
+          indentation = indentationMatch ? indentationMatch[0] : '' as string;
           properties.push(nextLine.trim());
         }
         i++;
@@ -91,9 +91,6 @@ export const sortProperties = () => {
         i++;
         line = lines[i];
       }
-    } else if (line.trim().startsWith('@import')) {
-      sortedLines.push(line);
-      i++;
     } else {
       sortedLines.push(line);
       i++;
