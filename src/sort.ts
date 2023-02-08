@@ -37,8 +37,6 @@ export const sortProperties = (): void => {
       while (!nextLine.trim().endsWith('}') && !nextLine.trim().endsWith('{')) {
         // Check if the next line is a CSS property
         if (nextLine.trim().includes(':')) {
-          indentationMatch = nextLine.match(/^\s+/) as RegExpMatchArray;
-          indentation = indentationMatch ? indentationMatch[0] : '' as string;
           properties.push(nextLine.trim());
         }
         i++;
