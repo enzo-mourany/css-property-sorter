@@ -53,11 +53,7 @@ export const sortProperties = (): void => {
         seenProperties.add(propName);
         return true;
       });
-      properties.sort((a, b) => {
-        let aProp: string = a.split(':')[0].trim();
-        let bProp: string = b.split(':')[0].trim();
-        return ORDERED_PROPERTIES.indexOf(aProp) - ORDERED_PROPERTIES.indexOf(bProp);
-      });
+      properties.sort((a, b) => ORDERED_PROPERTIES.indexOf(a.split(':')[0].trim()) - ORDERED_PROPERTIES.indexOf(b.split(':')[0].trim()));
       
       // Add the selector and sorted properties to the sortedLines array
       if (document.languageId === 'css') {
