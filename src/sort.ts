@@ -12,6 +12,10 @@ export const sortProperties = (): void => {
   
   // Get the text within the active text editor
   let text: string = document.getText();
+  if (!text) {
+    vscode.window.showErrorMessage('No text found in the active text editor.');
+    return;
+  }
   let lines: string[] = text.split('\n');
   
   // Initialize an empty array to store the sorted lines
@@ -19,7 +23,7 @@ export const sortProperties = (): void => {
   
   let i: number = 0;
   let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
-
+  
   while (i < lines.length) {
     let line: string = lines[i];
     
