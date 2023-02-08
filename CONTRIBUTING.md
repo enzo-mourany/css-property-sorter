@@ -2,13 +2,12 @@
 
 ## How to contribute
 
-- Fork this repository
-- Install the dependencies : `npm i` or `pnpm i`
-- Create a new branch : `git checkout -b my-feature`
-- Push your changes : `git push origin my-feature`
-- Create a pull request
-- Wait for your pull request to be reviewed and merged
-- Celebrate! 🎉
+1. Fork the Project
+2. Install the dependencies `npm i` or `pnpm i`
+3. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+4. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+5. Push to the Branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
 
 ## Testing project
 

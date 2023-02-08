@@ -4,11 +4,22 @@
 </p>
 
 
-## Description
+<!-- ABOUT THE EXTENSION -->
+## About The Extension
 
 This extension allows you to sort the **CSS properties** of each selector in a **CSS** or **SCSS** file. It makes the code more readable and facilitates maintenance.
 
 There is an ordering standard for css properties that is not well respected. This extension allows you to automatically order all these properties.
+
+### Built With
+
+* [![TypeScript][TypeScript]][TypeScript-url]
+* [![VSCodeAPI][VSCodeAPI]][VSCodeAPI-url]
+
+### Compatibility
+
+* [![CSS][CSS]][CSS-url]
+* [![SCSS][SCSS]][SCSS-url]  
 
 ## Installation
 
@@ -53,21 +64,68 @@ The extension uses the following sorting standard :
 - background properties
 - border properties
 - typography properties
+   
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Sort the properties of the selectors in the order in which they appear in the file
+- [x] Support for **SCSS** files
+- [x] Save indentation of the properties
+- [x] Support at-rules (media queries, keyframes, etc.)
+- [ ] Add a configuration panel to allow the user to choose the order of the properties
+- [ ] Sort selectors in the order (CSS file)
+- [ ] Save comments in the properties
+- [ ] Support LESS files
+- [ ] Support SASS files  
+
+See the [open issues](https://github.com/enzo-mourany/css-property-sorter/issues) for a full list of proposed features (and known issues).
 
 
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Install the dependencies `npm i` or `pnpm i`
+3. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+4. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+5. Push to the Branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
+
+
+<!-- LICENSE -->
 ## License
 
 [MIT License](https://choosealicense.com/licenses/mit/)
 
-## Author
+
+<!-- CONTACT -->
+## Contact
 
 [Enzo Mourany](https://github.com/enzo-mourany)
 
-## Contributing
-
-Contributions, issues and feature requests are welcome!
+[Project Link](https://github.com/enzo-mourany/css-property-sorter)
 
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
+
+
+
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
+[VSCodeAPI]: https://img.shields.io/badge/VSCodeAPI-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[VSCodeAPI-url]: https://code.visualstudio.com/api
+
+[VSCode]: https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[VSCode-url]: https://code.visualstudio.com/
+[CSS]: https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://developer.mozilla.org/fr/docs/Web/CSS
+[SCSS]: https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[SCSS-url]: https://sass-lang.com/

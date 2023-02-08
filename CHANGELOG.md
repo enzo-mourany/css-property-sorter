@@ -34,3 +34,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.2.1]
 
 - Fix at-rules selector : `@keyframes`, `@import` are not sorted
+
+## [1.2.2]
+
+- Duplicate properties are removed
+- Fix css indentation selector
+- Optimize code
+
