@@ -18,6 +18,8 @@ export const sortProperties = (): void => {
   let sortedLines: string[] = [];
   
   let i: number = 0;
+  let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
+
   while (i < lines.length) {
     let line: string = lines[i];
     
@@ -26,7 +28,6 @@ export const sortProperties = (): void => {
     let indentation: string = indentationMatch ? indentationMatch[0] : '';
     
     // get the indentation in vscode settings (CSS file only)
-    let workspaceIndentation: number = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
     for (let j: number = 0; j < workspaceIndentation; j++) {
       indentation += ' ';
     }
