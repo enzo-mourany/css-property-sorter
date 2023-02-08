@@ -4,6 +4,16 @@
 </p>
 
 
+<div align="center">
+  
+[![release][release-shield]][release-url]
+[![vscode][vscode-shield]][vscode-url]
+[![downloads][downloads-shield]][downloads-url]
+[![rating][rating-shield]][rating-url]
+
+</div>
+
+
 <!-- ABOUT THE EXTENSION -->
 ## About The Extension
 
@@ -114,6 +124,18 @@ Contributions are what make the open source community such an amazing place to l
 Give a ⭐️ if this project helped you!
 
 
+
+[release-shield]: https://img.shields.io/github/release/enzo-mourany/css-property-sorter.svg?style=for-the-badge&logo=github&logoColor=white&colorA=2b303b&colorB=00e8c6
+[release-url]: https://github.com/EliverLara/Andromeda/releases/latest
+
+[vscode-shield]: https://img.shields.io/badge/VS_Code-v1.26+-373277.svg?style=for-the-badge&logo=microsoft&logoColor=white&colorA=2b303b&colorB=7cb7ff
+[vscode-url]: https://code.visualstudio.com/updates/v1_26 
+
+[downloads-shield]: https://img.shields.io/visual-studio-marketplace/d/EnzoMourany.css-property-sorter?style=for-the-badge&logo=docusign&logoColor=white&colorA=2b303b&colorB=96E072
+[downloads-url]: https://marketplace.visualstudio.com/items?itemName=EnzoMourany.css-property-sorter
+
+[rating-shield]: https://img.shields.io/visual-studio-marketplace/stars/EnzoMourany.css-property-sorter?style=for-the-badge&logo=reverbnation&logoColor=white&colorA=2b303b&colorB=FFE66D
+[rating-url]: https://marketplace.visualstudio.com/items?itemName=EnzoMourany.css-property-sorter
 
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
