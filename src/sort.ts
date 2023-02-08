@@ -26,11 +26,7 @@ export const sortProperties = (): void => {
     // Use regular expression to extract current indentation for the selector
     let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
     let indentation: string = indentationMatch ? indentationMatch[0] : '';
-    
-    // get the indentation in vscode settings (CSS file only)
-    for (let j: number = 0; j < workspaceIndentation; j++) {
-      indentation += ' ';
-    }
+    indentation = ' '.repeat(indentation.length + workspaceIndentation);
     
     // Check if the line is a CSS selector
     if (line.trim().endsWith('{') && !line.trim().startsWith('@')) {
