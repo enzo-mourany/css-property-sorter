@@ -60,12 +60,8 @@ export const sortProperties = (): void => {
         sortedLines.push(selector);
       } else if (document.languageId === 'scss') {
         // scss indentation
-        let selectorIndent: string = '';
-        for (let j: number = 0; j < indentation.split('').length - workspaceIndentation; j++) {
-          selectorIndent += ' ';
-        }
-        // remove selectorIdent from indentation
-        sortedLines.push(selectorIndent + selector);
+        let selectorIndent = " ".repeat(indentation.length - workspaceIndentation);
+        sortedLines.push(`${selectorIndent}${selector}`);
       }
       
       // Add the properties to the sortedLines array
