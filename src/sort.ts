@@ -70,6 +70,9 @@ export const sortProperties = (): void => {
       
       // Add the properties to the sortedLines array
       for (let prop of properties) {
+        if (!prop.endsWith(';')) {
+          prop += ';';
+        }
         sortedLines.push(indentation + prop);
       }
       if(lines[i + 1] && lines[i + 1].trim() !== '}') {
