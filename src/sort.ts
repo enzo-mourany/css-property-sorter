@@ -20,11 +20,11 @@ export const sortProperties = (): void => {
   let i: number = 0;
   while (i < lines.length) {
     let line: string = lines[i];
-
+    
     // Use regular expression to extract current indentation for the selector
     let indentationMatch = line.match(/^\s+/) as RegExpMatchArray;
     let indentation: string = indentationMatch ? indentationMatch[0] : '';
-
+    
     // get the indentation in vscode settings (CSS file only)
     let workspaceIndentation: number = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
     for (let j: number = 0; j < workspaceIndentation; j++) {
@@ -49,6 +49,15 @@ export const sortProperties = (): void => {
       }
       
       // Sort the properties according to the ORDERED_PROPERTIES constant
+      let seenProperties: Set<string> = new Set();
+      properties = properties.filter(prop => {
+        let propName: string = prop.split(':')[0].trim();
+        if (seenProperties.has(propName)) {
+          return false;
+        }
+        seenProperties.add(propName);
+        return true;
+      });
       properties.sort((a, b) => {
         let aProp: string = a.split(':')[0].trim();
         let bProp: string = b.split(':')[0].trim();
