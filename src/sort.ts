@@ -23,6 +23,9 @@ export const sortProperties = (): void => {
   
   let i: number = 0;
   let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
+
+  // Comments management
+  let comments: { line: number, text: string }[] = [];
   
   while (i < lines.length) {
     let line: string = lines[i];
