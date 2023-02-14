@@ -40,7 +40,6 @@ There is an ordering standard for css properties that is not well respected. Thi
 ## Usage
 
 1. Open a **CSS** or **SCSS** file
-
 2. Click on the `CSS Sort` button in the status bar
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/statusbar-button.png" align="center" alt="Status Bar Button" />
@@ -49,7 +48,7 @@ or tap `Ctrl+Shift+P` and type `CSS Sort`
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/command.png" align="center" alt="Command Palette" />
 
-3. Click on `run` in the notification that appears
+1. Click on `run` in the notification that appears
 
 <img width="60%" src="https://raw.githubusercontent.com/enzo-mourany/css-property-sorter/main/images/notification.png" align="center" alt="Notification Run Button" />
 
@@ -83,11 +82,16 @@ The extension uses the following sorting standard :
 - [x] Support for **SCSS** files
 - [x] Save indentation of the properties
 - [x] Support at-rules (media queries, keyframes, etc.)
-- [ ] Add a configuration panel to allow the user to choose the order of the properties
+- [ ] Add a configuration panel to allow the user to choose the order of the properties (JSON file)
 - [ ] Sort selectors in the order (CSS file)
-- [ ] Save comments in the properties
+- [ ] Save comments before properties
 - [ ] Support LESS files
 - [ ] Support SASS files  
+- [ ] Better shortcut for the command
+- [ ] Alert the user if he writes a property incorrectly or if he puts information (or mesure unity) that does not match inside the property
+- [ ] Remove malformed CSS comments that interfere with the rest of the code
+
+
 
 See the [open issues](https://github.com/enzo-mourany/css-property-sorter/issues) for a full list of proposed features (and known issues).
 
