@@ -14,10 +14,13 @@ export function activate(context: vscode.ExtensionContext) {
 	cssSortButton.text = 'CSS Sort' as string;
 	cssSortButton.tooltip = 'Sort CSS properties' as string | vscode.MarkdownString;
 
-	const activeEditor = vscode.window.activeTextEditor as vscode.TextEditor;
-	if (activeEditor && (activeEditor.document.languageId === 'css' || activeEditor.document.languageId === 'scss')) {
-		cssSortButton.show();
-	}
+	context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor((editor) => {
+    if (editor && (editor.document.languageId === 'css' || editor.document.languageId === 'scss')) {
+      cssSortButton.show();
+    } else {
+      cssSortButton.hide();
+    }
+  }));
 	
 	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sortProperties', () => {
 		if (!vscode.window.activeTextEditor) {
