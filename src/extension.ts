@@ -21,6 +21,12 @@ export function activate(context: vscode.ExtensionContext) {
       cssSortButton.hide();
     }
   }));
+
+	context.subscriptions.push(vscode.workspace.onDidOpenTextDocument((document) => {
+    if (document.languageId === 'css' || document.languageId === 'scss') {
+      cssSortButton.show();
+    }
+  }));
 	
 	let sortCommand: vscode.Disposable = vscode.commands.registerCommand('css-property-sorter.sortProperties', () => {
 		if (!vscode.window.activeTextEditor) {
