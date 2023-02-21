@@ -33,7 +33,7 @@ export const sortProperties = (): void => {
     indentation = ' '.repeat(indentation.length + workspaceIndentation);
     
     // Check if the line is a CSS selector
-    if (line.trim().endsWith('{') && !line.trim().startsWith('@')) {
+    if (line.trim().endsWith('{') && !line.trim().startsWith('@import') && !line.trim().startsWith('@keyframes')) {
       let selector: string = line.trim();
       let properties: string[] = [];
       let nextLine: string = lines[i + 1];
