@@ -64,7 +64,7 @@ export const sortProperties = (): void => {
         sortedLines.push(selector);
       } else if (document.languageId === 'scss') {
         // scss indentation
-        let selectorIndent = " ".repeat(indentation.length - workspaceIndentation);
+        let selectorIndent: string = " ".repeat(indentation.length - workspaceIndentation);
         sortedLines.push(`${selectorIndent}${selector}`);
       }
       
