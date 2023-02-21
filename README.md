@@ -78,10 +78,17 @@ The extension uses the following sorting standard :
 <!-- ROADMAP -->
 ## Roadmap
 
+### Done
+
 - [x] Sort the properties of the selectors in the order in which they appear in the file
 - [x] Support for **SCSS** files
 - [x] Save indentation of the properties
 - [x] Support at-rules (media queries, keyframes, etc.)
+- [x] Support @include and @media query
+- [x] Display cssSortButton only if the file is a css or scss file
+
+### Planned
+
 - [ ] Add a configuration panel to allow the user to choose the order of the properties (JSON file)
 - [ ] Sort selectors in the order (CSS file)
 - [ ] Save comments before properties
@@ -90,7 +97,6 @@ The extension uses the following sorting standard :
 - [ ] Better shortcut for the command
 - [ ] Alert the user if he writes a property incorrectly or if he puts information (or mesure unity) that does not match inside the property
 - [ ] Remove malformed CSS comments that interfere with the rest of the code
-
 
 
 See the [open issues](https://github.com/enzo-mourany/css-property-sorter/issues) for a full list of proposed features (and known issues).

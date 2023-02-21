@@ -41,3 +41,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Fix css indentation selector
 - Optimize code
 
+## [1.2.3]
+
+### Features
+
+- Hide CssSortButton is not css or scss file
+- Support @media query and @include sort
