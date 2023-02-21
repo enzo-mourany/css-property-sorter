@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 	cssSortButton.text = 'CSS Sort' as string;
 	cssSortButton.tooltip = 'Sort CSS properties' as string | vscode.MarkdownString;
 
-	context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor((editor) => {
+	context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor((editor: vscode.TextEditor | undefined) => {
     if (editor && (editor.document.languageId === 'css' || editor.document.languageId === 'scss')) {
       cssSortButton.show();
     } else {
@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
   }));
 
-	context.subscriptions.push(vscode.workspace.onDidOpenTextDocument((document) => {
+	context.subscriptions.push(vscode.workspace.onDidOpenTextDocument((document: vscode.TextDocument) => {
     if (document.languageId === 'css' || document.languageId === 'scss') {
       cssSortButton.show();
     }
