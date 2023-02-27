@@ -24,6 +24,11 @@ export const sortProperties = (): void => {
   let i: number = 0;
   let workspaceIndentation = vscode.workspace.getConfiguration('editor').get('tabSize') as number;
   
+  // Comments management
+  let comments: {
+    includes(arg0: string): unknown; line: number, text: string 
+  }[] = [];
+  
   while (i < lines.length) {
     let line: string = lines[i];
     
@@ -68,10 +73,16 @@ export const sortProperties = (): void => {
         sortedLines.push(`${selectorIndent}${selector}`);
       }
       
+      
       // Add the properties to the sortedLines array
       for (let prop of properties) {
         if (!prop.endsWith(';')) {
           prop += ';';
+        }
+        let commentIndex = comments.findIndex(c => c.line === i + 1);
+        if (commentIndex !== -1) {
+          sortedLines.push(comments[commentIndex].text);
+          comments.splice(commentIndex, 1);
         }
         sortedLines.push(indentation + prop);
       }
