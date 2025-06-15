@@ -39,9 +39,14 @@ export const sortProperties = (): void => {
       let nextLine: string = lines[i + 1];
       
       while (!nextLine.trim().endsWith('}') && !nextLine.trim().endsWith('{')) {
-        // Check if the next line is a CSS property
-        if (nextLine.trim().includes(':')) {
-          properties.push(nextLine.trim());
+        const trimmedLine: string = nextLine.trim();
+        // Check if the next line is a CSS property or scss directive
+        if (
+          trimmedLine.includes(':') ||
+          trimmedLine.startsWith('@extend') ||
+          trimmedLine.startsWith('@include')
+        ) {
+          properties.push(trimmedLine);
         }
         i++;
         nextLine = lines[i + 1];
@@ -50,11 +55,10 @@ export const sortProperties = (): void => {
       // Sort the properties according to the ORDERED_PROPERTIES constant
       let seenProperties: Set<string> = new Set();
       properties = properties.filter(prop => {
-        let propName: string = prop.split(':')[0].trim();
-        if (seenProperties.has(propName)) {
+        if (seenProperties.has(prop)) {
           return false;
         }
-        seenProperties.add(propName);
+        seenProperties.add(prop);
         return true;
       });
       properties.sort((a, b) => ORDERED_PROPERTIES.indexOf(a.split(':')[0].trim()) - ORDERED_PROPERTIES.indexOf(b.split(':')[0].trim()));
